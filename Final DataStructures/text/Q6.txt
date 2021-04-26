@@ -1,0 +1,13 @@
+When I run my runner class with a size not too much larger than
+10000 I get a Stack Overflow exception when I try to add keys in
+increasing order in the Map. This is likely due to the many
+recursive calls that my insert method performs. 
+To improve on this it might be useful to use the upper or lower
+bound methods. There may be a way to find a node near to where I want
+to add the key and then insert from there insert from there instead
+of inserting from the root.
+This could have the result of reducing some of the recursion.
+Aside from that however my others calls were fairly close to the
+time that Java's tree map took. Because of this, I stand by my
+original decision to use a BST. I believe the array would have
+performed much more slowly. 

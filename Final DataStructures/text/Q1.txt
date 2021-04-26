@@ -1,0 +1,27 @@
+There are two significant advantages for choosing a sorted array over a BST. For starters
+there is no argument that is is easier to implement an array. Arrays are already built for containing
+objects and therefore no extra containment is necessary.
+As well iteration through an array is simple in either direction and doesn't require the need for an iterator
+object to assist,
+
+Aside from these advantages A BST is a much faster data structure to implement ordered
+objects. BSTs use binary searches inherently to find an element, add element and remove an
+element. These searches are of order log(n).
+In an array, searches are linear unless a binary search is explicitly implemented which is
+significantly slower with a large number of objects at order n.
+
+Adding an element to a tree requires updating a leaf node to a parent. Adding an element
+to an array requires moving all of the larger elements further ahead in the array. This 
+takes up extra time.
+
+Deleting an element in a tree involves, at most, altering the value of a node and then deleting
+a leaf node. Again for an array all of the larger elements must be pushed back towards the 
+beginning taking considerable time.
+
+For sizing, BSTs grow and shrink every time a change is made with out preallocating space.
+An array requires preallocated space and must be adjusted whenever it fills up. This
+growth takes extra time to copy over the values to the new array and runs the risk of
+allocating space that doesn't get used. 
+
+I believe that the BST is the superior data structure in the sense of timing and it
+will be used for my Sorted Map.
